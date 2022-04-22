@@ -52,20 +52,29 @@ $row=mysqli_fetch_array($result);
             <div>
            <label> Enter your address:<input type="text" name="Address" value="<?php echo $row['Address']?>"><br>  
   
-</div></label><br> 
-<div> Gender
-<input type="radio" name="Gender" value="male"> Male
-<input type="radio" name="Gender" value="female"> Female</div><br>
+          </div></label><br> 
 
-              <label>Designation</label>
-            <select name="Designation">
-            	<option value="HR">HR</option>
-            	<option value="Project Manager">Project Manager</option>
-            	<option value="QA">QA</option>
-            	<option value="Software Engineer">Software Engineer</option>
-            	<option value="Ui/UX">Ui/UX</option>
-            </select>
-            </div><br><br>
+          <div> 
+          <lable>Gender: </lable>
+
+            <input type="radio" name="Gender" value="0" <?php if($row['Gender']=="0"){ echo "checked='checked'";}else{echo "checked='checked'";} ?>> Male          
+
+            <input type="radio" name="Gender" value="1" <?php if($row['Gender']=="1"){ echo "checked='checked'";}else{echo "checked='checked'";} ?>> Female
+
+        </div><br>
+         
+          <div class="form-group">
+                        <b>Designation</b>
+                            <select id="Designation" name="Designation" class="form-control">
+                                <option value="">Choose Designation</option>
+                                <option value="Jr.Software Devloper" <?php if($row['Designation']=="Jr Devloper"){echo "selected";}?>> Jr Devloper</option>
+                                <option value="Sr.Software Devloper" <?php if($row['Designation']=="Sr Devloper"){echo "selected";}?>> Sr Devloper</option>
+                                <option value="Project Manager" <?php if($row['Designation']=="Project Manager"){echo "selected";}?>> Project Manager</option>
+                                <option value="Business Analyst" <?php if($row['Designation']=="Business Analyst"){echo "selected";}?>>  Business Analyst</option>
+                            </select>
+                  
+                        <small id="DesignationValidation" class="text-danger"></small>
+                    </div><br><br><br>
             
             
              <button type="submit" name="submit" class="btn btn-primary " >Submit</button></td>

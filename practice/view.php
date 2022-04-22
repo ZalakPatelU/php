@@ -21,8 +21,9 @@
                             <th>Designation</th>
 							<!-- <td value="<?php echo $rowq['Designation'];?>"> </td> -->
 							<th>Files</th>
+							<th>Subjects</th>
 							<th>Operation</th>
-							<td>AJEX DELETE</td>
+							<td>AJAX DELETE</td>
 							
 						  </tr>
 						
@@ -44,6 +45,7 @@
 		<td><?php echo $rowq['Gender'];?></td>
 		<td><?php echo $rowq['Designation'];?></td>
 		<td><?php echo $rowq['file'];?></td>
+		<td><?php echo $rowq['subject']?></td>
 
 		<td> <button type="submit" name="delete"  onclick="deleteRecord('<?php echo $rowq['id'];?>')" >Delete</button>
 			<!-- <button type="submit" name="update" name="update" onclick="updateRecord('<?php echo $rowq['id'];?>')" >Update</button></td> -->

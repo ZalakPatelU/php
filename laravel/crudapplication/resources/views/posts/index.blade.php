@@ -1,11 +1,11 @@
 @extends('posts.layout')
  
 @section('content')
-<!-- @php 
+@php 
     echo "<pre>";
         print_r($datanew);
     echo "</pre>";
-@endphp -->
+@endphp
 
     <div class="row" style="margin-top: 5rem;">
         <div class="col-lg-12 margin-tb">
@@ -30,6 +30,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Gender</th>
+            <th>Designation</th>
             <th>Details</th>
             <th width="280px">Action</th>
         </tr>
@@ -39,6 +40,7 @@
             <td>{{ $value->fname }} {{ $value->lname }}</td>
             <td>{{ $value->email }}</td>
             <td>{{ $value->gender }}</td>
+            <td>{{ $value->designation }}</td>
             <td>{{ \Str::limit($value->description, 100) }}</td>
             <td>
                 <form action="{{ route('posts.destroy',$value->id) }}" method="POST">   
@@ -52,6 +54,7 @@
         </tr>
         @endforeach
     </table>  
-   
+    <p>Date: {{ convertYmdToMdy('2022-02-12') }}</p>
+    <p>Date: {{ convertMdyToYmd('02-12-2022') }}</p>
     {!! $data->links() !!}      
 @endsection

@@ -44,6 +44,7 @@ class PostController extends Controller
             'lname' => 'required|min:1|max:10',
             'email' => 'required|email|unique:posts',
             'gender' => 'required',
+            // 'designation' => 'required',
             'description' => 'required|max:50',
         ],[
                 'fname.required' => 'first name is required',
@@ -53,6 +54,7 @@ class PostController extends Controller
                 'lname.min' => 'Minimum 1 charachers require!!',
                 'lname.max' => 'Minimum 10 charachers require!!',
                 'gender'=>'gender is required',
+                // 'designation'=>'please select designation',
                 'email.required' => 'Email is required',
                 'email.unique' => 'Email is already exists!!'
             ]);
@@ -101,6 +103,7 @@ class PostController extends Controller
             'lname' => 'required|min:1|max:10',
             'email' => 'required|unique:posts,email,'.$post->id.',id',
             'gender' => 'required',
+            // 'designation' => 'required',
             'description' => 'required|max:50',
         ],[
                 'fname.required' => 'first name is required',
@@ -110,6 +113,7 @@ class PostController extends Controller
                 'lname.min' => 'Minimum 1 charachers require!!',
                 'lname.max' => 'Minimum 10 charachers require!!',
                 'gender'=>'gender is required',
+                // 'designation'=>'please select designation',
                 'email.required' => 'Email is required',
                 'email.unique' => 'Email is already exists!!'
             ]);
@@ -134,6 +138,6 @@ class PostController extends Controller
         $post->delete();
     
         return redirect()->route('posts.index')
-        ->with('success','Post deleted successfully');
+                        ->with('success','Post deleted successfully');
     }
 }

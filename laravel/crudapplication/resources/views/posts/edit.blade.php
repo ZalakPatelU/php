@@ -56,6 +56,21 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Designation:</strong>
+                <select name="designation" class="form-control">
+                    <option value="" >Choose Designation</option>
+                    <option value="Jr.Software Devloper" {{ ($post->designation=="Jr.Software Devloper")? "selected" : "" }}>Jr.Software Devloper</option>
+                    <option value="Sr.Software Devloper"{{ ($post->designation=="Sr.Software Devloper")? "selected" : "" }}>Sr.Software Devloper</option>
+                    <option value="Associate Jr.Software Devloper" {{ ($post->designation=="Associate Jr.Software Devloper")? "selected" : "" }}>Associate Jr.Software Devloper</option>
+                    <option value="Business Analyst" {{ ($post->designation=="Business Analyst")? "selected" : "" }}> Business Analyst</option>
+                </select>
+                @if ($errors->has('designation'))
+                <span class="text-danger">{{ $errors->first('designation') }}</span>
+                @endif
+            </div>
+        </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group form-control">
                     <strong>Gender:</strong>
                     <input type="radio" name="gender" value="male" {{ ($post->gender=="male")? "checked" : "" }}>Male

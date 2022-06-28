@@ -1,12 +1,6 @@
 <?php
     require 'config.php';
-
-    // var_dump($_POST);
-    // $qry="SELECT * FROM form WHERE id=$id2";
-    // $rs=mysqli_query($conn,$qry);
-    // $row=mysqli_fetch_array($rs);
-
-    
+  
 $id = $_GET['id1'];
 echo $id;
 var_dump($_GET);
@@ -14,7 +8,7 @@ $result = mysqli_query($conn, "SELECT * FROM form WHERE id=$id");
 
 $row=mysqli_fetch_array($result);
 
- ?>
+?>
 <html>
     <head>
         <title>
@@ -77,7 +71,7 @@ $row=mysqli_fetch_array($result);
                     </div><br><br><br>
             
             
-             <button type="submit" name="submit" class="btn btn-primary " >Submit</button></td>
+             <button type="submit" name="submit" class="btn btn-primary ">Submit</button></td>
         
 				
         </form>

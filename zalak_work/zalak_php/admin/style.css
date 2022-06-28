@@ -1,0 +1,41 @@
+
+body
+{    
+	font-family: Calibri;    
+}    
+input[type="text"] 
+{    
+	width: 250px;    
+}    
+form
+{    
+	text-align: center;    
+	font-family: Calibri;    
+	font-size: 20px;    
+	border: 3px solid gray;    
+	width: 600px;    
+	margin: 20px auto;  				  
+}    
+td 
+{    
+	padding: 10px;    
+}    
+td:first-child 	
+{    
+	text-align: center;    
+	font-weight: bold;    
+}    
+td:last-child 
+{    
+	text-align: center;    
+}
+button 
+{
+	float: center;
+	background: rgb(35, 174, 202);
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
